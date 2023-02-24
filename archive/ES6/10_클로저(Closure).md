@@ -13,6 +13,8 @@ JS에는 어휘적 환경(Lexical Enviroment)이라는 것이 존재한다. 이�
 
 다음 코드를 참고하여 일련의 과정을 살펴보자.
 
+<br/>
+
 ### Lexical 환경 진행과정
 
 ```javascript
@@ -56,9 +58,7 @@ addOne(5)
 
 이제 이해를 돕는 추가 예문를 살펴보며, 렉시컬 환경이 클로저와 어떠한 연관이 있는지 알아보도록 하자.
 
----
-
-#### 📢 추가 예문
+### 💡 추가 예문
 
 ```javascript
 function makeAdder(x) {
@@ -89,7 +89,8 @@ console.log(add3(2));
     >- add3 : function
 
 4. 마지막 줄인 `console.log(add3(2))`이 실행되면 함수 `add3(2)`가 실행되고 Lexical 환경이 만들어지는데, 이 함수의 내용은 makeAdder의 안에 있다.
-	즉, 다시 또 add3( )에 대한 Lexical 환경이 생성될 때 이 환경은 makeAdder의 하위 환경이다.
+
+    즉, 다시 또 add3( )에 대한 Lexical 환경이 생성될 때 이 환경은 makeAdder의 하위 환경이다.
 
 	  >**익명함수 Lexical 환경**
     >  - y : 2
@@ -103,8 +104,6 @@ console.log(add3(2));
 <br/>
 
 이제 위에서 본 예시를 다시 한번 정리해보자. `makeAdder 함수`의 내부에 작성된 함수는 변수 y를 지니고 있으면서 상위 함수의 x에 접근이 가능하다.
-
-<br/>
 
 그리고 `add3 함수`가 생성된 이후에도 상위 함수인 makeAdder의 x에 접근이 가능하다.
 
@@ -128,11 +127,9 @@ console.log(add3(1));		// 4
 결과에서 보이듯이 add3에서는 `x=3` 그리고 add10에서는 `x=10`으로 별개의 값을 지니고 있다.  
 **_그 이유는 add3과 add10이 서로 다른 환경을 지니고 있기 때문이다._**
 
----
-
 <br/>
 
-### 한번 더 살펴보기
+### 👀 한번 더 살펴보기
 
 ```javascript
 function makeCounter() {
@@ -166,6 +163,7 @@ console.log(counter());		// 2
 
 **_이렇게 종료된 함수의 변수에 접근할 수 있으며, 변수를 은닉화 시킬 수 있는 것이 `클로저`이다._**
 
+<br/>
 <br/>
 
 # Reference

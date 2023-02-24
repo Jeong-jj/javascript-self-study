@@ -74,8 +74,6 @@ car3.__proto__ = carProto;
 console.log(car1);
 ```
 
-<br/>
-
 위를 보면 이전에 중복되던 내용을 `carProto`라는 객체에 넣어 만들어 주었다.
 
 그리고 각각 다른 내용을 담은 객체에 `__proto__`라는 것을 이용해 각 객체의 prototype을 carProto로 지정해준 것이다.  
@@ -125,8 +123,6 @@ _**이것이 바로 prototype chain이다.**_
 
 <br/>
 
----
-
 > **※ 주의할 점**
 >
 >이렇게 상속을 받은 객체에서 반복문이나 객체 메소드를 사용하면 어떻게 될까?
@@ -154,8 +150,7 @@ _**이것이 바로 prototype chain이다.**_
 >```
 >객체 메소드에서는 상속받은 property는 나오지 않는다.
 
----
-
+<br/>
 <br/>
 
 ## instance
@@ -173,8 +168,6 @@ const bmw = new Car();
 
 bmw instanceof Car;		// true
 ```
-
-***
 
 <br/>
 <br/>
@@ -197,6 +190,7 @@ car.getColor();		// red
 
 이렇게 하면 초기에 세팅한 color값을 얻을 수만 있고 변경하는 것은 불가능하게 된다.
 
+<br/>
 <br/>
 
 # Reference

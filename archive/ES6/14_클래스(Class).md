@@ -25,7 +25,7 @@
 
 ## 1. 생성자 함수와의 공통점
 
-#### 📢 생성자 함수
+### 🌱 생성자 함수
 ```javascript
 const User1 = function(name, age) {
   this.name = name;
@@ -38,7 +38,8 @@ User1.prototype.showName = function() {
 const mike = new User1("Mike", 30);
 ```
 
-#### 📢 class
+### 🌱 class
+
 ```javascript
 class User2 {
   constructor(name, age) {
@@ -53,15 +54,11 @@ class User2 {
 const mike = new User2("Mike", 30);
 ```
 
-<br/>
-
 위의 생성자 함수에 의해 만들어진 mike와 class에 의해 만들어진 mike는 동일하다.
 
 생성자 함수에서 만드는 객체의 내용을 class함수에서는 `constructor`라는 부분에서 처리하게 된다. constructor는 인수를 전해 받을 수도 있다.
 
-<br/>
-
-즉, `new Uer2`에 의해 만들어진 mike는 constructor에 의해 그 안의 내용을 담은 객체로 만들어지는 것이다.
+> 즉, `new Uer2`에 의해 만들어진 mike는 constructor에 의해 그 안의 내용을 담은 객체로 만들어지는 것이다.
 
 <br/>
 <br/>
@@ -90,7 +87,7 @@ class User2 {
 
 **_즉, 위의 showName( )메소드가 상속하는 내용이 되는 것이다._**
 
-***
+---
 
 <br/>
 
@@ -105,7 +102,8 @@ class User2 {
 
 <br/>
 
-#### 📢 생성자 함수
+#### 🌱 생성자 함수
+
 ```javascript
 const User1 = function(name, age) {
   this.name = name;
@@ -132,7 +130,7 @@ const mike = User1("Mike", 30);
 
 <br/>
 
-#### 📢 class
+#### 🌱 class
 
 ```javascript
 class User2 {
@@ -153,6 +151,7 @@ const mike = User2("Mike", 30);
 <br/>
 
 보다시피 mike를 찍어볼 필요도 없이 이미 new없이는 class를 실행할 수 없다는 `typeError 경고문`을 띄우고 있다.
+
 이를 통해 우리가 작성한 코드의 오류를 줄일 수 있게 된다.
 
 <br/>
@@ -164,7 +163,7 @@ const mike = User2("Mike", 30);
 >
 >따라서 실행할 때 class라는 것이 인식되면 new없이는 error경고창을 띄운다.
 
-***
+---
 
 <br/>
 
@@ -172,22 +171,27 @@ const mike = User2("Mike", 30);
 
 이전에 상속을 배울 때 `생성자 함수`에서는 `for in문` 실행시 본인이 소유한 property외에 상속받은 prototype의 property까지 순회한다는 것을 배웠다.
 
+<br/>
+
 ![생성자함수의 for-in문](https://user-images.githubusercontent.com/96231175/221205999-ec2b1cbd-9981-4ce1-9a35-f0a433fd72a1.png)
-
-
-때문에 상속받은 것을 제외하고 싶을 때는 `.hasOwnProperty()`메소드를 사용해야만 했었다.
 
 <br/>
 
+때문에 상속받은 것을 제외하고 싶을 때는 `.hasOwnProperty()`메소드를 사용해야만 했었다.
+
 **_그러나 class에서는 이런 번거로움을 줄일 수 있다._**
 
+<br/>
+
 ![class의 for-in문](https://user-images.githubusercontent.com/96231175/221205997-b31e2daa-b15c-4123-b31a-db58d9e1dd16.png)
+
+<br/>
 
 보이는 바와 같이 `class`로 만든 객체의 `for in문`에서는 상속되는 property는 순회하지 않는다.
 
 그렇기 때문에 직접 본인 소유와 상속 property를 구분해줄 번거로움이 적다.
 
-***
+---
 
 <br/>
 
@@ -197,7 +201,7 @@ const mike = User2("Mike", 30);
 
 <br/>
 
-#### 📢 extends
+#### 🌱 extends
 
 class에서는 `extends`라는 것을 이용해서 상속을 시킨다.
 
@@ -241,7 +245,7 @@ const z4 = new Bmw("blue");
 
 # 📌 class의 Overriding 
 
->## 상속 내용 덮어쓰기
+>### 상속 내용 덮어쓰기
 >
 >만약 class를 사용할 때 상속 과정에서 prototype과 같은 이름의 메소드를 만들면 어떻게 될까?
 >
@@ -297,7 +301,7 @@ _**이렇게 기존의 부모 class의 property를 유지하며 사용하는 것
 
 ### constructor의 overriding
 
-그렇다면 이번엔 constructor의 overriding을 살펴보자.
+그렇다면 이번엔 constructor의 overriding을 살펴보자.  
 아래를 보면 Bmw 클래스에 constructor 내용을 추가해주었다. _어떻게 될까?_
 
 ```javascript
@@ -374,8 +378,6 @@ class Bmw extends Car {
 };
 ```
 
-<br/>
-
 > ### 내부 과정 살펴보기
 >
 >만약 자식 class에 constructor를 작성하지 않았을 땐 어떤 일이 일어나길래 error가 뜨지 않는 것일까?
@@ -396,6 +398,7 @@ class Bmw extends Car {
 >>
 >>**_따라서 직접 constructor를 입력하면 저 위의 자동적인 과정이 진행되지 않기 때문에 인수를 받는 과정 또한 직접 작성해주어야 한다._**
 
+<br/>
 <br/>
 
 # Reference

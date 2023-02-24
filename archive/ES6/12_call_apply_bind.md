@@ -9,7 +9,6 @@ JS에서는 일반적인 방법 외에도 함수의 호출 방식과 상관없�
 <br/>
 
 # 📌 call
-
 ## 1. 사용 방법
 
 `call` 메소드는 모든 함수에서 사용 가능하며, this를 특정 값으로 지정할 수 있다.
@@ -35,6 +34,8 @@ showThisName.call(mike);	// "Mike"
 
 그런데 만약 그냥 실행만 한다면 이 함수의 this는 window이기 때문에 아무것도 나타나지 않는다.
 
+<br/>
+
 >window.name은 `""`빈 문자열
 
 <br/>
@@ -48,7 +49,6 @@ showThisName.call(mike);	// "Mike"
 
 ## 2. call의 매개변수
 
->
 - 첫번째 매개변수 : 해당 함수의 this가 된다.
 - 두번째 이후의 매개변수 : 해당 함수에서 사용할 매개변수 값에 순서대로 들어간다.
 
@@ -101,17 +101,14 @@ update.apply(mike, [1999, "doctor"]);
 console.log(mike);
 ```
 
-<br/>
-
 **call파트**에서 call로 처리했던 코드를 apply로 바꿔주면 위와 같이 되는 것이다.
-
 
 보이는 바와 같이 함수의 매개변수로 사용할 인자를 `[1999, "doctor"]` 배열로 만들었다. 결과는 이전과 동일하다.
 
 <br/>
 
 > ## call 과 apply의 매개변수 처리 비교
-> #### feat. spread 연산자
+> ### feat. spread 연산자
 >
 >```javascript
 >const num = [3, 1, 7, 10];
@@ -121,10 +118,8 @@ console.log(mike);
 >const callMin = Math.min.call(null, ...num);
 >			// = Math.min.apply(null, 3, 1, 7, 10)
 >```
-> ##### 위 두 함수는 this값이 없기 때문에 null을 넣어주었다_(아무값이나 넣어도 된다)_.
+> #### 위 두 함수는 this값이 없기 때문에 null을 넣어주었다. _(아무값이나 넣어도 된다)_
 > 위에서 `apply`는 배열을 함수 매개변수로 받기 때문에 그대로 작성하였고, `call`에서는 풀어넣어주어야 하기 때문에 스프레드 연산자 `...`를 이용하여 넣어준 것을 볼 수 있다.
-
-***
 
 <br/>
 <br/>
@@ -155,8 +150,7 @@ console.log(mike);		// {{birthYear:1980, name:"Mike", occupation:"police"}
 <br/>
 
 # 📢 실용 예제
-
-#### 아래에서 fn( )호출이 제대로 되지 않은 원인을 찾고 이를 수정해보아라(call, apply, bind를 이용).
+### 아래에서 fn( )호출이 제대로 되지 않은 원인을 찾고 이를 수정해보아라(call, apply, bind를 이용).
 
 ```javascript
 const user = {
@@ -198,8 +192,7 @@ fn();		// "hello, "
 >bindFn();				// "hello, Mike"
 >```
 
----
-
+<br/>
 <br/>
 
 # Reference
