@@ -1,5 +1,4 @@
-
-**[ES6초급강의](https://velog.io/@rgfdds98/ECMAScript6%EA%B8%B0%EC%B4%88) 수강후 이어지는 강의 정리입니다.**
+**[ES6초급강의](https://github.com/Jeong-jj/javascript-self-study/blob/main/archive/ES6/01_ES6_%EA%B8%B0%EC%B4%88.md) 수강후 이어지는 강의 정리입니다.**
 
 이전에 공부했던 [JS기초공부](https://github.com/Jeong-jj/javascript-self-study/tree/main/archive/Javascript%EA%B8%B0%EC%B4%88)에 이어서 하는 공부이기에 부족했던 부분에 대해서만 작성하고, 강의에서 이전 공부와 중복되는 부분은 생략하고 작성하였습니다.
 
@@ -9,7 +8,7 @@
 
 - [JS기초 - 객체지향(1)](https://github.com/Jeong-jj/javascript-self-study/blob/main/archive/Javascript%EA%B8%B0%EC%B4%88/15.1_%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(1).md) : 생성자 함수
 - [JS기초 - 객체지향(2)](https://github.com/Jeong-jj/javascript-self-study/blob/main/archive/Javascript%EA%B8%B0%EC%B4%88/15.2_%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5(2).md) : 상속 & prototype
-- [ES6 - 상속](https://velog.io/@rgfdds98/ECMAScript6ES6-12) : 상속
+- [ES6 - 상속](https://github.com/Jeong-jj/javascript-self-study/blob/main/archive/ES6/13_%EC%83%81%EC%86%8D_prototype.md) : 상속
 
 <br/>
 
